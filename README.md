@@ -1,1 +1,1 @@
-# Studying_EffectivePython
+# Learning_EffectivePython
