@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "studying_effectivepython"
+version = "0.1.0"
+description = ""
+authors = ["SORARAwo4649 <k11274649@icloud.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
