@@ -22,6 +22,7 @@ def to_str(bytes_or_str):
 
 
 # https://docs.python.org/ja/3/library/reprlib.html
+# reprはデバッグ用の出力で使う
 print(repr(to_str(b'foo')))
 print(repr(to_str('bar')))
 
