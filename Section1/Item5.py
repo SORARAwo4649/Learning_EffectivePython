@@ -8,6 +8,7 @@ from urllib.parse import parse_qs
 # URLのクエリ文字列を解析する
 my_value = parse_qs('red=5&blue=0&green=', keep_blank_values=True)
 # reprはデバッグ用の出力で使う
+# reprは与えられた値のPython表現を生成する
 print(repr(my_value))
 # 出力結果の違いが分からない
 print('#####')
