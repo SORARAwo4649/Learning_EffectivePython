@@ -29,3 +29,36 @@ print(d1)
 d1 = {1: 'A'}
 d1 |= [(2, 'B'), (3, 'C')]
 print(d1)
+print('#############################')
+
+"""
+removeprefix()メソッドとremevesuffix()メソッドによる文字列操作
+"""
+print("lsttripの確認")
+# lstrip()とrsturip()で文字列の前後の空白を取り除く
+s = "   hello   "
+print(repr(s))
+print(repr(s.lstrip()))
+
+# GithubのコミットログからIssue番号だけを取り出す
+print("GithubのコミットログGH-1234からIssue番号だけを取り出す\n"
+      "従来の方法")
+text = "GH-1234"
+if text.startswith("GH-"):
+    text = text[3:]
+
+print(text)
+
+# removeprefix()メソッドを使うを使う
+print("removeprefix()を使う")
+text = "GH-1234"
+text = text.removeprefix("GH-")
+print(text)
+
+# removesuffix()も使ってみる
+print("removesuffix()を使ってみる")
+text = "[大安売り]"
+print(text)
+print(text.removeprefix("[").removesuffix("]"))
+
+
