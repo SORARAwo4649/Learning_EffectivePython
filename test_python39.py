@@ -1,3 +1,7 @@
+from datetime import datetime
+from typing import List
+from zoneinfo import ZoneInfo
+
 # Python3.9のテストです
 """
 10/5 Python3.9.0が公開される
@@ -60,5 +64,24 @@ print("removesuffix()を使ってみる")
 text = "[大安売り]"
 print(text)
 print(text.removeprefix("[").removesuffix("]"))
+print("#############################")
 
+"""
+組み込みGeneric型
+"""
+# これまでのコード
+intlist: List[int] = [1, 2, 3]
+print(intlist)
 
+# 新しくなったコード
+intlist: list[int] = [1, 2, 3]
+print(intlist)
+print("############################33")
+
+"""
+zoneinfoモジュール
+"""
+tokyo = ZoneInfo("Asia/Tokyo")
+
+now = datetime(2020, 10, 1, 0, 0, 0, tzinfo=tokyo)
+print(now.isoformat())
