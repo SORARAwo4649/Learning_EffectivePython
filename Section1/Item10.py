@@ -19,13 +19,25 @@ def make_lemonade(count):
     print('レモネード完成！！')
 
 
+# サイダーを作るのにはアップルが4個必要らしい
+def make_cider(count):
+    fresh_fruit['apple'] -= 4
+    if fresh_fruit['apple'] <= 0:
+        fresh_fruit.pop('apple')
+    print('サイダー完成！！')
+
+
 def out_of_stock():
     print('在庫切れ')
 
 
 # getの第2引数は、第一引数のキーが存在しなかったときの返り値
-count = fresh_fruit.get('lemon', 0)
-if count:
+# レモネードの注文
+if count := fresh_fruit.get('lemon', 0):
     make_lemonade(count)
 else:
     out_of_stock()
+
+# サイダーの注文
+if (count := fresh_fruit.get('apple')) >= 4:
+    make_cider(count)
