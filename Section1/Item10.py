@@ -34,6 +34,18 @@ def slice_bananas(count):
     fresh_fruit['slice_banana'] += 1
 
 
+class OutOfBananas(Exception):
+    pass
+
+
+# バナナスムージーを作る
+def make_smoothies(count):
+    fresh_fruit['slice_banana'] -= 1
+    if fresh_fruit['slice_banana'] <= 0:
+        fresh_fruit.pop('slice_banana')
+    print('バナナスムージー完成！！')
+
+
 def out_of_stock():
     print('在庫切れ')
 
@@ -53,8 +65,8 @@ if (count := fresh_fruit.get('apple', 0)) >= 4:
 # バナナの在庫確認
 if (count := fresh_fruit.get('banana', 0)) >= 2:
     # スライスバナナの在庫確認
-    if not fresh_fruit['slice_banana']:
-        # スライスバナナの容器の準備
-        fresh_fruit |= {'slice_banana': 0}
+    fresh_fruit['slice_banana'] = 0
+    
+
     # スライスバナナの作成
     slice_bananas(count)
